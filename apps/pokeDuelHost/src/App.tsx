@@ -2,8 +2,6 @@ import { Container, Heading, Stack, Text } from "@chakra-ui/react";
 import { MatchList } from "./components/MatchList";
 import Navbar from "./components/Nav";
 // @ts-ignore
-import Counter from "pokeDuelManagement/Counter";
-// @ts-ignore
 import MatchModal from "pokeDuelManagement/MatchModal";
 
 function App() {
@@ -11,7 +9,6 @@ function App() {
     <div className="bg-slate-50 min-h-screen">
       <MatchModal isOpen />
       <Navbar />
-      <Counter />
       <Container maxW={"5xl"}>
         <Stack
           textAlign={"center"}

@@ -5,7 +5,6 @@ import { PokemonAPI } from "../apis/pokemonAPI";
 import { ILocation, IPokemon, IPokemonLookup } from "../apis/pokemonAPI.types";
 
 import { useDisclosure } from "@chakra-ui/react";
-import { Test } from "./Test";
 
 export interface IEnrichedMatch
   extends Omit<IMatch, "challenger" | "challengee"> {

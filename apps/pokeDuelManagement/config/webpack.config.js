@@ -759,7 +759,6 @@ module.exports = function (webpackEnv) {
             pokeDuelHost: 'pokeDuelHost@http://localhost:3000/remoteEntry.js',
           },
           exposes: {
-            "./Counter": "./src/Counter.tsx",
             "./MatchModal": "./src/components/MatchModal.tsx",
           },
           shared: {

@@ -1,10 +1,20 @@
-import { Container, Heading, Stack, Text } from "@chakra-ui/react";
-import Counter from "./Counter";
+import { Button, Container, Heading, Stack, Text } from "@chakra-ui/react";
+import MatchModal from "./components/MatchModal";
+// @ts-ignore
+import { useMatchContext } from "pokeDuelHost/MatchContext";
 
 function App() {
+  const { openMatchModal } = useMatchContext();
+
+  function newDuel() {
+    openMatchModal();
+  }
+  function editDuel() {
+    openMatchModal("Arcade Mayhem");
+  }
+
   return (
     <div className="bg-slate-50 min-h-screen">
-      <Counter />
       <Container maxW={"5xl"}>
         <Stack
           textAlign={"center"}
@@ -17,18 +27,22 @@ function App() {
             fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
           >
-            Front-Row{" "}
+            Pokémon Duels{" "}
             <Text as={"span"} className="text-green-500 whitespace-nowrap">
-              Pokémon Duels
-            </Text>
+              Management
+            </Text>{" "}
+            App
           </Heading>
           <Text color={"gray.500"} maxW={"3xl"}>
-            Immerse yourself in the electrifying world of Pokémon battles like
-            never before. Witness fierce clashes between teh most powerful
-            Pokémon. Our exclusive Duel Spectator Tickets grant you a front-row
-            seat to the most anticipated duels in the Pokémon universe.
+            This is the pokeduel management microfrontend.
           </Text>
+          <Text color={"gray.500"} maxW={"3xl"}>
+            It contains the MatchModal code.
+          </Text>
+          <Button onClick={newDuel}>Open modal (New duel)</Button>
+          <Button onClick={editDuel}>Open modal (Edit duel)</Button>
         </Stack>
+        <MatchModal />
       </Container>
     </div>
   );

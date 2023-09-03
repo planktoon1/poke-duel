@@ -24,11 +24,30 @@ import {
   useBoolean,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { IMatch } from "../apis/matchAPI";
-import { IEnrichedMatch } from "../contexts/MatchContext";
+import { IPokemon } from "../pokemonAPI.types";
 
 // @ts-ignore
-import { useMatchContext } from "pokeDuelHost/useMatchContext";
+import { useMatchContext } from "pokeDuelHost/MatchContext";
+
+export interface IMatch {
+  name: string;
+  /** id or name of pokemon */
+  challenger: number | string;
+  /** id or name of pokemon */
+  challengee: number | string;
+  /** ISO string */
+  startTime: string;
+  /** ISO string */
+  endTime: string;
+  location: string;
+  entryFee: string;
+}
+
+export interface IEnrichedMatch
+  extends Omit<IMatch, "challenger" | "challengee"> {
+  challenger: IPokemon;
+  challengee: IPokemon;
+}
 
 interface IMatchFormFields {
   title: { value: string };

@@ -759,7 +759,7 @@ module.exports = function (webpackEnv) {
             pokeDuelManagement: 'pokeDuelManagement@http://localhost:8001/remoteEntry.js',
           },
           exposes: {
-            "./useMatchContext": "./src/contexts/MatchContext.tsx",
+            "./MatchContext": "./src/contexts/MatchContext.tsx",
           },
           shared: {
             'react-singleton-context': { singleton: true, eager: true },
