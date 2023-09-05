@@ -26,8 +26,11 @@ import {
 import { useEffect } from "react";
 import { IPokemon } from "../pokemonAPI.types";
 
-// @ts-ignore
-import { useMatchContext } from "pokeDuelHost/MatchContext";
+import * as RemoteMatchModule from "pokeDuelHost/MatchContext";
+import * as LocalMatchModule from "../../../pokeDuelHost/src/contexts/MatchContext";
+
+const MatchContextModule = RemoteMatchModule as typeof LocalMatchModule;
+const { useMatchContext } = MatchContextModule;
 
 export interface IMatch {
   name: string;
