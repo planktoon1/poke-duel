@@ -1,13 +1,12 @@
 import { Container, Heading, Stack, Text } from "@chakra-ui/react";
 import { MatchList } from "./components/MatchList";
 import Navbar from "./components/Nav";
-// @ts-ignore
-import MatchModal from "pokeDuelManagement/MatchModal";
+import { MatchModal } from "./remoteModule";
 
 function App() {
   return (
     <div className="bg-slate-50 min-h-screen">
-      <MatchModal isOpen />
+      <MatchModal />
       <Navbar />
       <Container maxW={"5xl"}>
         <Stack

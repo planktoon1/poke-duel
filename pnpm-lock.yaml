@@ -212,6 +212,10 @@ importers:
       workbox-webpack-plugin:
         specifier: ^6.4.1
         version: 6.4.1(webpack@5.64.4)
+    devDependencies:
+      poke-duel-management:
+        specifier: workspace:*
+        version: link:../pokeDuelManagement
 
   apps/pokeDuelManagement:
     dependencies:

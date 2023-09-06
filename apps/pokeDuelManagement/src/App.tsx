@@ -1,7 +1,6 @@
 import { Button, Container, Heading, Stack, Text } from "@chakra-ui/react";
 import MatchModal from "./components/MatchModal";
-// @ts-ignore
-import { useMatchContext } from "pokeDuelHost/MatchContext";
+import { useMatchContext } from "./remoteModule";
 
 function App() {
   const { openMatchModal } = useMatchContext();

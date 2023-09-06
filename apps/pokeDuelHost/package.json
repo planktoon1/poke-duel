@@ -2,8 +2,8 @@
   "name": "poke-duel-host",
   "version": "0.1.0",
   "private": true,
-  "main": "./src/index.tsx",
-  "types": "./src/index.tsx",
+  "main": "./src/contexts/MatchContext.tsx",
+  "types": "./src/contexts/MatchContext.tsx",
   "dependencies": {
     "react-singleton-context": "1.0.2",
     "@babel/core": "^7.16.0",
@@ -94,7 +94,8 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "poke-duel-management": "workspace:*"
   },
   "babel": {
     "presets": [

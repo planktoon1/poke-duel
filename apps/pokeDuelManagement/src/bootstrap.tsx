@@ -4,8 +4,7 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App";
 import "./index.css";
-// @ts-ignore
-import { MatchContextProvider } from "pokeDuelHost/MatchContext";
+import { MatchContextProvider } from "./remoteModule";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

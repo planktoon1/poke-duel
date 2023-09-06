@@ -25,12 +25,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { IPokemon } from "../pokemonAPI.types";
-
-import * as RemoteMatchModule from "pokeDuelHost/MatchContext";
-import * as LocalMatchModule from "../../../pokeDuelHost/src/contexts/MatchContext";
-
-const MatchContextModule = RemoteMatchModule as typeof LocalMatchModule;
-const { useMatchContext } = MatchContextModule;
+import { useMatchContext } from "../remoteModule";
 
 export interface IMatch {
   name: string;
