@@ -92,7 +92,8 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "poke-duel-host": "workspace:*"
   },
   "jest": {
     "roots": [
