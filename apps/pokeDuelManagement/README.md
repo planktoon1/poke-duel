@@ -2,6 +2,8 @@
 
 Microfrontend containing the event management modal
 
+Both this and PokeDuelHost needs to be running at the same time.
+
 ## Available Scripts
 
 In the project directory, you can run:
