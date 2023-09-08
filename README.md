@@ -8,6 +8,9 @@ Apps:
  - PokeDuelManagement: MatchModal component extracted from the standalone app and configured as a microfrontend with module federation.
  - PokeDuelHost: The host application, hosting PokeDuelManagement application and the rest of the application. Also acts as remote serving the MatchContext to PokeDuelManagement. 
 
+Limitation:
+ - The setup is exploring typescript type sharing which works in the setup, but it breaks the monorepo dependency graph. For this to be a production-ready solution further refinement on the type sharing is needed. With the current setup monorepo commands either complain or just dont work at all. 
+
 Focus:
 
 - Deliver PoC which adequately demonstrates potential of application
