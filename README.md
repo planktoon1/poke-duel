@@ -1,6 +1,12 @@
 # Poké duel - event management
 
 A development exercise. Exploring React, monorepo and microfrontend architecture.
+It is most of all a poc implementation of the above things and there are suboptimal, mocked and lacking implementations. 
+
+Apps:
+ - PokeDuel: Standalone app
+ - PokeDuelManagement: MatchModal component extracted from the standalone app and configured as a microfrontend with module federation.
+ - PokeDuelHost: The host application, hosting PokeDuelManagement application and the rest of the application. Also acts as remote serving the MatchContext to PokeDuelManagement. 
 
 Focus:
 
