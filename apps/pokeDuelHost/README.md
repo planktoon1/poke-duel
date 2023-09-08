@@ -1,6 +1,8 @@
 # Poké duel - Host application
 
-The entry point for the application
+The entry point for the application.
+
+Both this and pokeDuelManagement needs to be running at the same time.
 
 ## Available Scripts
 
